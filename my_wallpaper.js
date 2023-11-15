@@ -10,21 +10,35 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
+
+  
 }
 
 function wallpaper_background() {
-  background(255,233,0); //Mork Borg Yellow
+  let pink= color(255,62,181);
+  let yellow = color(255,150,0);
+  background(yellow)
  
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
     let pink= color(255,62,181);
-    let yellow = color(255,233,0);
+    let yellow = color(55,150,0);
+    let inner = color(210,260,200);
+    let black = color(0,40,0);
+    /*Mork Borg Colours 
+    yellow 255,233,0
+    pink 255,62,181
+   */
+    stroke(black)
+    strokeWeight(5)
+    fill(yellow)
 
-    stroke(25);
-    strokeWeight(2)
+    rect(0,0,200,200)
+    stroke(black);
+    strokeWeight(2);
 
-    line(5,5,5,100);
+  /*  line(5,5,5,100);
     line(5,105,5,200);
     line(10,15,10,115);
     line(10,125,10,200);
@@ -96,7 +110,25 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(195,0,195,100);
     line(195,110,195,200);
     line(200,10,200,110);
-    line(200,135,200,200);
+    line(200,135,200,200); */
+
+    noFill();
+    strokeWeight(10)
+    ellipse(100,100,200,200);
+    ellipse(100,100,175,175);
+    ellipse(100,100,150,150);
+    ellipse(100,100,125,125);
+    ellipse(100,100,100,100);
+
+    strokeWeight(5);
+    line(0,0,200,200);
+    line(0,20,180,200);
+    line(20,0,200,180);
+
+    strokeWeight(5);
+    line(0,200,200,0);
+    line(0,180,180,0);
+    line(200,20,20,200);
 
    /* //Gutterborn
     stroke(pink)
@@ -139,10 +171,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     //Skull
     stroke(yellow);
-    strokeWeight(2)
-    fill(25);
+    strokeWeight(3)
+    fill(inner);
   
-    ellipse(100,111,100,100)
+    ellipse(100,111,100,100) //range between x 85 - 120 y 70 - 120   
   
     beginShape(); //Mandibles
     curveVertex(76.2166,139.4311); //handle
@@ -161,18 +193,18 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(124.8754,139.4311);//Handle 2
     endShape();
   
-    fill(0);
+    fill(inner);
   
-    ellipse(94.8089 ,170.7826 ,10,20); //Teef
-    ellipse(105.1911  ,170.7826 ,10,20); //Teef
-    ellipse(115.1911  ,168.7826  ,10,20); //Teef
-    ellipse(84.8089 ,168.7826  ,10,20); //Teef
+    ellipse(94.8089 ,170.7826 ,10,30); //Teef //Range between y 10 - 30
+    ellipse(105.1911  ,170.7826 ,10,30); //Teef
+    ellipse(115.1911  ,168.7826  ,10,26); //Teef // Range between y 10 - 26
+    ellipse(84.8089 ,168.7826  ,10,26); //Teef
   
-    fill(25);
+    fill(inner);
   
     beginShape(); //Gums
-    curveVertex(76.3422 ,164.7577);
-    curveVertex(79.5244 ,154.5556);
+    curveVertex(76.3422 ,144.7577);
+    curveVertex(77.5244 ,150.5556);
     curveVertex(78.58  ,168.1667 );
     curveVertex(84.4133 , 165.6667);
     curveVertex(89.6355  ,173.3333);
@@ -182,34 +214,41 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(110.3645 , 173.3333);
     curveVertex(115.5867 ,165.6667);
     curveVertex(121.42  ,168.1667);
-    curveVertex(120.4756  ,154.5556);
-    curveVertex(123.6578 ,164.7577);
+    curveVertex(123.4756  ,150.5556);
+    curveVertex(123.6578 ,144.7577);
     endShape();
   
     fill(yellow);
   
+    stroke(yellow);
+
+    ellipse(84,140,10,10); // round eye range between 5 - 20
+    ellipse(116,140,10,10); // round eye range between 5 - 20
+
     strokeWeight(3);
-  
+    stroke(0);
+
     /*line(73,132,91,145); //Cross Eye Left
     line(94,132,78,142);
   
     /*line(126,132,109,145); //CrossEye Right
     line(106,132,122,142);*/
-  
-    strokeWeight(1);
+    stroke(yellow);
+   /* strokeWeight(1);
     beginShape();  //Eye Left
     curveVertex(73.8612, 132.7006);
     curveVertex(94.3057 ,135.3673);
     curveVertex(91.1945 , 145.2932);
     curveVertex(78.1575 ,142.7747);
-    endShape(CLOSE);
+    endShape(CLOSE);*/
   
-    beginShape(); //Eye Right
+  
+    /*beginShape(); //Eye Right
     curveVertex(126.4485, 132.7006);
     curveVertex(106.0041,135.3673);
     curveVertex(109.1152, 145.2932);
     curveVertex(122.1522,142.7747);
-    endShape(CLOSE);
+    endShape(CLOSE);*/
   
     beginShape(); //Nose Hole
     curveVertex(100, 138.5492);
@@ -286,13 +325,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     vertex(110,55);
     endShape() */
 
-     //Herbmaster
+    /* //Herbmaster
     stroke(yellow)
-    fill(25)
+    fill(0)
     strokeWeight(3)
 
     beginShape();
-    curveVertex(66.1064 , 60.2417);
+    curveVertex(56.1064 , 60.2417);
     curveVertex(60.8682  ,96.6862);
     curveVertex(62.646  ,102.0195);
     curveVertex(71.0904  , 101.7973);
@@ -301,7 +340,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     endShape(CLOSE);
 
     beginShape();
-    curveVertex(44.6946 ,77.8609);
+    curveVertex(36.6946 ,77.8609);
     curveVertex(43.0721 ,105.9241);
     curveVertex(54.5351 ,117.0887);
     curveVertex(62.8675 ,110.9664);
@@ -310,12 +349,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     endShape(CLOSE);
 
     beginShape();
-    curveVertex(128.3157 ,98.2743 );
+    curveVertex(138.3157 ,98.2743 );
     curveVertex(128.5591 ,108.4297 );
     curveVertex(117.471 ,125.7833 );
     curveVertex(124.4287 ,130.8956 );
     curveVertex(134.0004 ,121.573 );
-    curveVertex(132.6455 ,98.1401 );
+    curveVertex(142.6455 ,98.1401 );
     endShape(CLOSE);
 
     beginShape();
@@ -334,33 +373,33 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(2)
     
     beginShape();
-    curveVertex(45.7593 ,86.474 );
-    curveVertex(62.9362 ,85.6591 );
-    curveVertex(50.6864 ,59.9405 );
-    curveVertex(28.6362 ,85.8828 );
+    curveVertex(65.3618 ,63.1306 );
+    curveVertex(82.6952 ,65.575 );
+    curveVertex(84.0285 ,54.9084 );
+    curveVertex(68.0285 ,36.9084 );
+    curveVertex(49.6374 ,54.9084 );
+    curveVertex(51.3618 ,63.3528 );
     endShape(CLOSE);
 
     beginShape();
-    curveVertex(65.3618 ,63.1306 );
-    curveVertex(72.6952 ,65.575 );
-    curveVertex(74.0285 ,54.9084 );
-    curveVertex(68.0285 ,46.9084 );
-    curveVertex(59.6374 ,54.9084 );
-    curveVertex(61.3618 ,63.3528 );
+    curveVertex(45.7593 ,86.474 );
+    curveVertex(72.9362 ,85.6591 );
+    curveVertex(50.6864 ,59.9405 );
+    curveVertex(18.6362 ,85.8828 );
     endShape(CLOSE);
 
     beginShape();
     curveVertex(129.5128 ,105.3304 );
-    curveVertex(149.6524 ,101.7277 );
-    curveVertex(127.6424 ,83.1764 );
-    curveVertex(117.4137 ,104.6516 );
+    curveVertex(159.6524 ,101.7277 );
+    curveVertex(137.6424 ,73.1764 );
+    curveVertex(107.4137 ,104.6516 );
     endShape(CLOSE);
 
     beginShape();
     curveVertex(116.1111 ,109 );
-    curveVertex(125.6667 ,102.3333 );
+    curveVertex(135.6667 ,102.3333 );
     curveVertex(107.2222 ,95.4444 );
-    curveVertex(103.8889 ,111.4444 );
+    curveVertex(93.8889 ,111.4444 );
     endShape(CLOSE); 
 
     /* //Heretical Priest
@@ -380,7 +419,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(99.5,82,103.5,82);
     line(99.5,123,103.5,123); */
 
-    /* //Hermit
+     //Hermit
     stroke(pink);
     strokeWeight(3);
 
@@ -425,6 +464,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     line(131.4444,81.4444,119.6667,111);
     line(127.9023,90.3333,139,87.4444);
-    line(136.9933,92,125.8956,94.8889); */
+    line(126.9933,112,125.8956,94.8889); 
   }
   
