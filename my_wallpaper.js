@@ -13,7 +13,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(255,233,0); //light honeydew green colour
+  background(255,233,0); //Mork Borg Yellow
  
 }
 
@@ -21,8 +21,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     let pink= color(255,62,181);
     let yellow = color(255,233,0);
 
-    stroke(0);
-    strokeWeight(4)
+    stroke(25);
+    strokeWeight(2)
 
     line(5,5,5,100);
     line(5,105,5,200);
@@ -98,12 +98,49 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(200,10,200,110);
     line(200,135,200,200);
 
+   /* //Gutterborn
+    stroke(pink)
+    fill(20)
+    strokeWeight(2)
+    beginShape()
+    vertex(105,10);
+    vertex(105,50);
+    vertex(110,54);
+    vertex(110,189.6009);
+    vertex(100,200);
+    vertex(90,189.6009);
+    vertex(90,54);
+    vertex(95,50);
+    vertex(95,10);
+    endShape(CLOSE);
 
+    beginShape()
+    vertex(130,49);
+    vertex(130,43);
+    vertex(116,41);
+    vertex(83,41);
+    vertex(70,43);
+    vertex(70,49);
+    vertex(83,47);
+    vertex(116,47);
+    endShape(CLOSE);
 
+  
 
+    strokeWeight(1);
+    stroke(pink)
+    line(100,200,100,47);
+
+    strokeWeight(2)
+    fill(25)
+    ellipse(100,11,15,15)
+    ellipse(130,46,9,9)
+    ellipse(70,46,9,9) */
+
+    //Skull
     stroke(yellow);
     strokeWeight(2)
-    fill(pink);
+    fill(25);
   
     ellipse(100,111,100,100)
   
@@ -124,14 +161,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(124.8754,139.4311);//Handle 2
     endShape();
   
-    fill(pink);
+    fill(0);
   
     ellipse(94.8089 ,170.7826 ,10,20); //Teef
     ellipse(105.1911  ,170.7826 ,10,20); //Teef
     ellipse(115.1911  ,168.7826  ,10,20); //Teef
     ellipse(84.8089 ,168.7826  ,10,20); //Teef
   
-    fill(pink);
+    fill(25);
   
     beginShape(); //Gums
     curveVertex(76.3422 ,164.7577);
@@ -153,19 +190,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
     strokeWeight(3);
   
-    line(73,132,91,145); //Cross Eye Left
+    /*line(73,132,91,145); //Cross Eye Left
     line(94,132,78,142);
   
     /*line(126,132,109,145); //CrossEye Right
     line(106,132,122,142);*/
   
     strokeWeight(1);
-    /*beginShape();  //Eye Left
+    beginShape();  //Eye Left
     curveVertex(73.8612, 132.7006);
     curveVertex(94.3057 ,135.3673);
     curveVertex(91.1945 , 145.2932);
     curveVertex(78.1575 ,142.7747);
-    endShape(CLOSE);*/
+    endShape(CLOSE);
   
     beginShape(); //Eye Right
     curveVertex(126.4485, 132.7006);
@@ -181,7 +218,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(96.4874,152.6313);
     endShape(CLOSE);
 
-    //CROWN
+    /*//CROWN
     stroke(pink);
 
     fill(20);
@@ -206,10 +243,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     ellipse(100,75,15,25);
     ellipse(80,80,10,20);
-    ellipse(120,80,10,20)
+    ellipse(120,80,10,20)*/
 
-   /* //Deserter
-    stroke(yellow)
+    /* //Deserter
+    stroke(pink)
     strokeWeight(2)
     fill(20)
     beginShape()
@@ -239,13 +276,155 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     vertex(125,150);
     vertex(130,130);
     endShape(CLOSE)
-    noFill();
+
+   /* noFill(); //crest
     beginShape();
     vertex(90,55);
     vertex(90,100);
     vertex(100,105);
     vertex(110,100);
     vertex(110,55);
-    endShape()*/
+    endShape() */
+
+     //Herbmaster
+    stroke(yellow)
+    fill(25)
+    strokeWeight(3)
+
+    beginShape();
+    curveVertex(66.1064 , 60.2417);
+    curveVertex(60.8682  ,96.6862);
+    curveVertex(62.646  ,102.0195);
+    curveVertex(71.0904  , 101.7973);
+    curveVertex(68.8682 ,92.4639 );
+    curveVertex(68.2015 ,60.2417);
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(44.6946 ,77.8609);
+    curveVertex(43.0721 ,105.9241);
+    curveVertex(54.5351 ,117.0887);
+    curveVertex(62.8675 ,110.9664);
+    curveVertex(49.5886 ,90.1838);
+    curveVertex(49.88 ,78.0217);
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(128.3157 ,98.2743 );
+    curveVertex(128.5591 ,108.4297 );
+    curveVertex(117.471 ,125.7833 );
+    curveVertex(124.4287 ,130.8956 );
+    curveVertex(134.0004 ,121.573 );
+    curveVertex(132.6455 ,98.1401 );
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(112.1111 ,106.5556 );
+    curveVertex(115 ,121 );
+    curveVertex(108.1111 ,135 );
+    curveVertex(108.5556 ,141.8889 );
+    curveVertex(115 ,144.5556 );
+    curveVertex(124.1111 ,136.7778);
+    curveVertex(123.8889 ,119.2222 );
+    curveVertex(116.3333 ,104.3333 );
+    endShape(CLOSE);
+
+    fill(pink);
+    stroke(yellow);
+    strokeWeight(2)
+    
+    beginShape();
+    curveVertex(45.7593 ,86.474 );
+    curveVertex(62.9362 ,85.6591 );
+    curveVertex(50.6864 ,59.9405 );
+    curveVertex(28.6362 ,85.8828 );
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(65.3618 ,63.1306 );
+    curveVertex(72.6952 ,65.575 );
+    curveVertex(74.0285 ,54.9084 );
+    curveVertex(68.0285 ,46.9084 );
+    curveVertex(59.6374 ,54.9084 );
+    curveVertex(61.3618 ,63.3528 );
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(129.5128 ,105.3304 );
+    curveVertex(149.6524 ,101.7277 );
+    curveVertex(127.6424 ,83.1764 );
+    curveVertex(117.4137 ,104.6516 );
+    endShape(CLOSE);
+
+    beginShape();
+    curveVertex(116.1111 ,109 );
+    curveVertex(125.6667 ,102.3333 );
+    curveVertex(107.2222 ,95.4444 );
+    curveVertex(103.8889 ,111.4444 );
+    endShape(CLOSE); 
+
+    /* //Heretical Priest
+    stroke(pink);
+    strokeWeight(3);
+
+    line(85,110,110,110);
+    line(90,107,115,107);
+    line(98.5,75,98.5,120);
+    line(101.5,80,101.5,125)
+    line(92,105,92,109);
+    line(113,105,113,109);
+    line(108,112,108,108);
+    line(87,112,87,108);
+    line(96.5,118,100.5,118);
+    line(96.5,77,100.5,77);
+    line(99.5,82,103.5,82);
+    line(99.5,123,103.5,123); */
+
+    /* //Hermit
+    stroke(pink);
+    strokeWeight(3);
+
+    line(54.7778,103.6703,60.8889,120.5556);
+    line(53.8889,109.2222,60.8889,111);
+
+    noFill()
+    beginShape()
+    vertex(69.0444,117.4735);
+    vertex(78.0756,100.3624);
+    vertex(65.022,98.1331);
+    vertex(71.2329,85.2405);
+    vertex(61.2667,86.5847);
+    endShape(CLOSE)
+
+    noFill()
+    beginShape()
+    vertex(99.2467,107.6667);
+    vertex(77.2467,82.1111);
+    vertex(81.2467,69.8889);
+    vertex(90.7914,75.3972);
+    vertex(85.9877,110.7778);
+    endShape()
+
+    noFill()
+    beginShape()
+    vertex(104.5565,107.2611);
+    vertex(106.9986,67.7715);
+    vertex(118.022,78.2847);
+    vertex(109.1385,84.899);
+    vertex(113.4453,108.0063);
+    endShape()
+
+    noFill()
+    beginShape()
+    vertex(144.4507,95.7412);
+    vertex(141.5544,101.9381);
+    vertex(145.2083,111.6271);
+    vertex(136.5121,112.7269);
+    vertex(133.9999,118.1021);
+    endShape(CLOSE)
+
+    line(131.4444,81.4444,119.6667,111);
+    line(127.9023,90.3333,139,87.4444);
+    line(136.9933,92,125.8956,94.8889); */
   }
   
