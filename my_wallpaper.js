@@ -23,15 +23,15 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
     let pink= color(255,62,181);
-    let yellow = color(55,150,0);
-    let inner = color(210,260,200);
-    let black = color(0,40,0);
+    let yellow = color(255,233,0);
+    let inner = color(255,255,255);
+    let black = color(0,0,0);
     /*Mork Borg Colours 
     yellow 255,233,0
     pink 255,62,181
    */
     stroke(black)
-    strokeWeight(5)
+    strokeWeight(2)
     fill(yellow)
 
     rect(0,0,200,200)
@@ -113,19 +113,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(200,135,200,200); */
 
     noFill();
-    strokeWeight(10)
+    strokeWeight(5)
     ellipse(100,100,200,200);
     ellipse(100,100,175,175);
     ellipse(100,100,150,150);
     ellipse(100,100,125,125);
     ellipse(100,100,100,100);
 
-    strokeWeight(5);
+    strokeWeight(2);
     line(0,0,200,200);
     line(0,20,180,200);
     line(20,0,200,180);
 
-    strokeWeight(5);
+    strokeWeight(2);
     line(0,200,200,0);
     line(0,180,180,0);
     line(200,20,20,200);
@@ -170,7 +170,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     ellipse(70,46,9,9) */
 
     //Skull
-    stroke(yellow);
+    stroke(pink);
     strokeWeight(3)
     fill(inner);
   
@@ -195,10 +195,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
     fill(inner);
   
-    ellipse(94.8089 ,170.7826 ,10,30); //Teef //Range between y 10 - 30
-    ellipse(105.1911  ,170.7826 ,10,30); //Teef
-    ellipse(115.1911  ,168.7826  ,10,26); //Teef // Range between y 10 - 26
-    ellipse(84.8089 ,168.7826  ,10,26); //Teef
+    ellipse(94.8089 ,170.7826 ,10,20); //Teef //Range between y 10 - 30
+    ellipse(105.1911  ,170.7826 ,10,20); //Teef
+    ellipse(115.1911  ,168.7826  ,10,20); //Teef // Range between y 10 - 26
+    ellipse(84.8089 ,168.7826  ,10,20); //Teef
   
     fill(inner);
   
@@ -220,35 +220,37 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
     fill(yellow);
   
-    stroke(yellow);
-
+    stroke(pink);
+    /*
     ellipse(84,140,10,10); // round eye range between 5 - 20
     ellipse(116,140,10,10); // round eye range between 5 - 20
-
+    */
     strokeWeight(3);
-    stroke(0);
 
-    /*line(73,132,91,145); //Cross Eye Left
+    line(73,132,91,145); //Cross Eye Left
     line(94,132,78,142);
   
-    /*line(126,132,109,145); //CrossEye Right
-    line(106,132,122,142);*/
-    stroke(yellow);
-   /* strokeWeight(1);
+    line(126,132,109,145); //CrossEye Right
+    line(106,132,122,142);
+
+    /*
+    stroke(pink);
+    strokeWeight(3);
     beginShape();  //Eye Left
     curveVertex(73.8612, 132.7006);
     curveVertex(94.3057 ,135.3673);
     curveVertex(91.1945 , 145.2932);
     curveVertex(78.1575 ,142.7747);
-    endShape(CLOSE);*/
-  
-  
-    /*beginShape(); //Eye Right
+    endShape(CLOSE);
+    */
+    /*
+    beginShape(); //Eye Right
     curveVertex(126.4485, 132.7006);
     curveVertex(106.0041,135.3673);
     curveVertex(109.1152, 145.2932);
     curveVertex(122.1522,142.7747);
-    endShape(CLOSE);*/
+    endShape(CLOSE); 
+    */
   
     beginShape(); //Nose Hole
     curveVertex(100, 138.5492);
