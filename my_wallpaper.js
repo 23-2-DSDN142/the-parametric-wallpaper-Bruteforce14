@@ -9,14 +9,14 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 100;
 
   
 }
 
 function wallpaper_background() {
   let pink= color(255,62,181);
-  let yellow = color(255,150,0);
+  let yellow = color(255,233,0);
   background(yellow)
  
 }
@@ -26,19 +26,33 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     let yellow = color(255,233,0);
     let inner = color(255,255,255);
     let black = color(0,0,0);
+    let line1 = color(pink);
+    let line2 = color(pink);
+    let line3 = color(black);
+    let base1 = color(black);
+    let base2 = color(black);
+    let base3 = color(black);
+    let back = color(yellow);
+    let teeth = color(yellow);
+    
+    let centerX = 100;
+    let centerY = 100;
+    let craniumSize = 140;
+    let eyeSize = 10;
+    
     /*Mork Borg Colours 
     yellow 255,233,0
     pink 255,62,181
    */
-    stroke(black)
+    stroke(line3)
     strokeWeight(2)
-    fill(yellow)
-
+    fill(back)
+  /*
     rect(0,0,200,200)
-    stroke(black);
-    strokeWeight(2);
+    stroke(line3);
+    strokeWeight(2);*/
 
-  /*  line(5,5,5,100);
+    line(5,5,5,100);
     line(5,105,5,200);
     line(10,15,10,115);
     line(10,125,10,200);
@@ -110,9 +124,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(195,0,195,100);
     line(195,110,195,200);
     line(200,10,200,110);
-    line(200,135,200,200); */
-
-    noFill();
+    line(200,135,200,200); 
+    
+   /* noFill();
     strokeWeight(5)
     ellipse(100,100,200,200);
     ellipse(100,100,175,175);
@@ -128,135 +142,136 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(2);
     line(0,200,200,0);
     line(0,180,180,0);
-    line(200,20,20,200);
-
-   /* //Gutterborn
-    stroke(pink)
-    fill(20)
+    line(200,20,20,200);*/
+    
+   /*
+    //Gutterborn
+    stroke(line2)
+    fill(base2)
     strokeWeight(2)
     beginShape()
-    vertex(105,10);
-    vertex(105,50);
-    vertex(110,54);
-    vertex(110,189.6009);
-    vertex(100,200);
-    vertex(90,189.6009);
-    vertex(90,54);
-    vertex(95,50);
-    vertex(95,10);
+    vertex(centerX+craniumSize/100*5,centerY-craniumSize/100*101);
+    vertex(centerX+craniumSize/100*5,centerY-craniumSize/100*61);
+    vertex(centerX+craniumSize/100*10,centerY-craniumSize/100*57);
+    vertex(centerX+craniumSize/100*10,centerY+craniumSize/100*79);
+    vertex(centerX,centerY+craniumSize/100*89);
+    vertex(centerX-craniumSize/100*10,centerY+craniumSize/100*79);
+    vertex(centerX-craniumSize/100*10,centerY-craniumSize/100*57);
+    vertex(centerX-craniumSize/100*5,centerY-craniumSize/100*61);
+    vertex(centerX-craniumSize/100*5,centerY-craniumSize/100*101);
     endShape(CLOSE);
 
     beginShape()
-    vertex(130,49);
-    vertex(130,43);
-    vertex(116,41);
-    vertex(83,41);
-    vertex(70,43);
-    vertex(70,49);
-    vertex(83,47);
-    vertex(116,47);
+    vertex(centerX+craniumSize/100*30,centerY-craniumSize/100*52);
+    vertex(centerX+craniumSize/100*30,centerY-craniumSize/100*58);
+    vertex(centerX+craniumSize/100*16,centerY-craniumSize/100*60);
+    vertex(centerX-craniumSize/100*30,centerY-craniumSize/100*60);
+    vertex(centerX-craniumSize/100*30,centerY-craniumSize/100*58);
+    vertex(centerX-craniumSize/100*30,centerY-craniumSize/100*52);
+    vertex(centerX-craniumSize/100*17,centerY-craniumSize/100*54);
+    vertex(centerX+craniumSize/100*16,centerY-craniumSize/100*54);
     endShape(CLOSE);
 
   
 
     strokeWeight(1);
-    stroke(pink)
-    line(100,200,100,47);
+    stroke(line1)
+    line(centerX,centerY+craniumSize/100*89,centerX,centerY-craniumSize/100*54);
 
     strokeWeight(2)
-    fill(25)
-    ellipse(100,11,15,15)
-    ellipse(130,46,9,9)
-    ellipse(70,46,9,9) */
-
+    fill(base2)
+    ellipse(centerX,centerY-craniumSize/100*100,craniumSize/100*15,craniumSize/100*15)
+    ellipse(centerX+craniumSize/100*30,centerY-craniumSize/100*55,craniumSize/100*9,craniumSize/100*9)
+    ellipse(centerX-craniumSize/100*30,centerY-craniumSize/100*55,craniumSize/100*9,craniumSize/100*9) 
+  */
     //Skull
-    stroke(pink);
+    stroke(line1);
     strokeWeight(3)
-    fill(inner);
+    fill(base1);
   
-    ellipse(100,111,100,100) //range between x 85 - 120 y 70 - 120   
+    ellipse(centerX,centerY,craniumSize) //range between x 85 - 120 y 70 - 120   
   
     beginShape(); //Mandibles
-    curveVertex(76.2166,139.4311); //handle
-    curveVertex(61.7912,123.6703);//start point
-    curveVertex(71.3516,147.8462);//second point
-    curveVertex(64.7582,151.8022);
-    curveVertex(61.022,163.2308);
-    curveVertex(67.6154,168.7253);
-    curveVertex(77.2857,163.4505);
-    curveVertex(123.8062,163.4505);
-    curveVertex(133.4765,168.7253);
-    curveVertex(140.0699,163.2308);
-    curveVertex(136.3337,151.8022);
-    curveVertex(129.7403,147.8462);
-    curveVertex(139.3007,123.6703);
-    curveVertex(124.8754,139.4311);//Handle 2
+    curveVertex(centerX-craniumSize/100*24,centerY+craniumSize/100*28); //handle
+    curveVertex(centerX-craniumSize/100*40,centerY+craniumSize/100*15);//start point
+    curveVertex(centerX-craniumSize/100*28,centerY+craniumSize/100*37);//second point
+    curveVertex(centerX-craniumSize/100*36,centerY+craniumSize/100*40);
+    curveVertex(centerX-craniumSize/100*39,centerY+craniumSize/100*52);
+    curveVertex(centerX-craniumSize/100*33,centerY+craniumSize/100*58);
+    curveVertex(centerX-craniumSize/100*23,centerY+craniumSize/100*52);
+    curveVertex(centerX+craniumSize/100*23,centerY+craniumSize/100*52);
+    curveVertex(centerX+craniumSize/100*33,centerY+craniumSize/100*58);
+    curveVertex(centerX+craniumSize/100*39,centerY+craniumSize/100*52);
+    curveVertex(centerX+craniumSize/100*36,centerY+craniumSize/100*40);
+    curveVertex(centerX+craniumSize/100*28,centerY+craniumSize/100*37);
+    curveVertex(centerX+craniumSize/100*40,centerY+craniumSize/100*15);
+    curveVertex(centerX+craniumSize/100*24,centerY+craniumSize/100*28);//Handle 2
     endShape();
   
-    fill(inner);
+    fill(teeth);
   
-    ellipse(94.8089 ,170.7826 ,10,20); //Teef //Range between y 10 - 30
-    ellipse(105.1911  ,170.7826 ,10,20); //Teef
-    ellipse(115.1911  ,168.7826  ,10,20); //Teef // Range between y 10 - 26
-    ellipse(84.8089 ,168.7826  ,10,20); //Teef
+    ellipse(centerX-craniumSize/100*6 ,centerY+craniumSize/100*59 ,craniumSize/100*10,craniumSize/100*20); //Teef //Range between y 10 - 30
+    ellipse(centerX+craniumSize/100*6  ,centerY+craniumSize/100*59 ,craniumSize/100*10,craniumSize/100*20); //Teef
+    ellipse(centerX+craniumSize/100*16  ,centerY+craniumSize/100*57  ,craniumSize/100*10,craniumSize/100*20); //Teef // Range between y 10 - 26
+    ellipse(centerX-craniumSize/100*16 ,centerY+craniumSize/100*57  ,craniumSize/100*10,craniumSize/100*20); //Teef
   
-    fill(inner);
+    fill(base1);
   
     beginShape(); //Gums
-    curveVertex(76.3422 ,144.7577);
-    curveVertex(77.5244 ,150.5556);
-    curveVertex(78.58  ,168.1667 );
-    curveVertex(84.4133 , 165.6667);
-    curveVertex(89.6355  ,173.3333);
-    curveVertex(94.4416 ,166.5497 );
-    curveVertex(100, 173.7778);
-    curveVertex(105.5584  ,166.5497 );
-    curveVertex(110.3645 , 173.3333);
-    curveVertex(115.5867 ,165.6667);
-    curveVertex(121.42  ,168.1667);
-    curveVertex(123.4756  ,150.5556);
-    curveVertex(123.6578 ,144.7577);
+    curveVertex(centerX-craniumSize/100*24,centerY+craniumSize/100*34);
+    curveVertex(centerX-craniumSize/100*23,centerY+craniumSize/100*40);
+    curveVertex(centerX-craniumSize/100*22,centerY+craniumSize/100*57);
+    curveVertex(centerX-craniumSize/100*16,centerY+craniumSize/100*55);
+    curveVertex(centerX-craniumSize/100*10,centerY+craniumSize/100*62);
+    curveVertex(centerX-craniumSize/100*5,centerY+craniumSize/100*55 );
+    curveVertex(centerX,centerY+craniumSize/100*63);
+    curveVertex(centerX+craniumSize/100*5,centerY+craniumSize/100*55);
+    curveVertex(centerX+craniumSize/100*10,centerY+craniumSize/100*62);
+    curveVertex(centerX+craniumSize/100*16,centerY+craniumSize/100*55);
+    curveVertex(centerX+craniumSize/100*22,centerY+craniumSize/100*57);
+    curveVertex(centerX+craniumSize/100*23,centerY+craniumSize/100*40);
+    curveVertex(centerX+craniumSize/100*24,centerY+craniumSize/100*34);
     endShape();
   
-    fill(yellow);
+    fill(back);
   
-    stroke(pink);
+    stroke(line1);
     /*
-    ellipse(84,140,10,10); // round eye range between 5 - 20
-    ellipse(116,140,10,10); // round eye range between 5 - 20
+    ellipse(centerX-craniumSize/100*16,centerY+craniumSize/100*29,craniumSize/100*eyeSize); // round eye range between 5 - 20
+    ellipse(centerX+craniumSize/100*16,centerYcraniumSize/100*29,craniumSize/100*eyeSize); // round eye range between 5 - 20
     */
     strokeWeight(3);
 
-    line(73,132,91,145); //Cross Eye Left
-    line(94,132,78,142);
+    line(centerX-craniumSize/100*27,centerY+craniumSize/100*21,centerX-craniumSize/100*9,centerY+craniumSize/100*34); //Cross Eye Left
+    line(centerX-craniumSize/100*6,centerY+craniumSize/100*21,centerX-craniumSize/100*22,centerY+craniumSize/100*31);
   
-    line(126,132,109,145); //CrossEye Right
-    line(106,132,122,142);
+    line(centerX+craniumSize/100*26,centerY+craniumSize/100*21,centerX+craniumSize/100*9,centerY+craniumSize/100*34); //CrossEye Right
+    line(centerX+craniumSize/100*6,centerY+craniumSize/100*21,centerX+craniumSize/100*22,centerY+craniumSize/100*31);
 
     /*
-    stroke(pink);
+    stroke(line1);
     strokeWeight(3);
     beginShape();  //Eye Left
-    curveVertex(73.8612, 132.7006);
-    curveVertex(94.3057 ,135.3673);
-    curveVertex(91.1945 , 145.2932);
-    curveVertex(78.1575 ,142.7747);
+    curveVertex(centerX-craniumSize/100*26,centerY+craniumSize/100*21);
+    curveVertex(centerX-craniumSize/100*6,centerY+craniumSize/100*24);
+    curveVertex(centerX-craniumSize/100*9,centerY+craniumSize/100*34);
+    curveVertex(centerX-craniumSize/100*22,centerY+craniumSize/100*32);
     endShape(CLOSE);
     */
     /*
     beginShape(); //Eye Right
-    curveVertex(126.4485, 132.7006);
-    curveVertex(106.0041,135.3673);
-    curveVertex(109.1152, 145.2932);
-    curveVertex(122.1522,142.7747);
+    curveVertex(centerX+craniumSize/100*26,centerY+craniumSize/100*21);
+    curveVertex(centerX+craniumSize/100*6,centerY+craniumSize/100*24);
+    curveVertex(centerX+craniumSize/100*9,centerY+craniumSize/100*34);
+    curveVertex(centerX+craniumSize/100*22,centerY+craniumSize/100*32);
     endShape(CLOSE); 
     */
   
     beginShape(); //Nose Hole
-    curveVertex(100, 138.5492);
-    curveVertex(103.8948,152.6313);
-    curveVertex(100,149.8164);
-    curveVertex(96.4874,152.6313);
+    curveVertex(centerX,centerY+craniumSize/100*27);
+    curveVertex(centerX+craniumSize/100*4,centerY+craniumSize/100*42);
+    curveVertex(centerX,centerY+craniumSize/100*39);
+    curveVertex(centerX-craniumSize/100*4,centerY+craniumSize/100*42);
     endShape(CLOSE);
 
     /*//CROWN
@@ -287,9 +302,9 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     ellipse(120,80,10,20)*/
 
     /* //Deserter
-    stroke(pink)
+    stroke(line2)
     strokeWeight(2)
-    fill(20)
+    fill(base2)
     beginShape()
     vertex(70,130);
     vertex(75,150);
@@ -328,8 +343,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     endShape() */
 
     /* //Herbmaster
-    stroke(yellow)
-    fill(0)
+    stroke(line2)
+    fill(base3)
     strokeWeight(3)
 
     beginShape();
@@ -370,8 +385,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(116.3333 ,104.3333 );
     endShape(CLOSE);
 
-    fill(pink);
-    stroke(yellow);
+    fill(base3);
+    stroke(line2);
     strokeWeight(2)
     
     beginShape();
@@ -422,50 +437,50 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(99.5,123,103.5,123); */
 
      //Hermit
-    stroke(pink);
+    stroke(line2);
     strokeWeight(3);
 
-    line(54.7778,103.6703,60.8889,120.5556);
-    line(53.8889,109.2222,60.8889,111);
+    line(centerX-craniumSize/100*45,centerY-craniumSize/100*7,centerX-craniumSize/100*39,centerY+craniumSize/100*10);
+    line(centerX-craniumSize/100*46,centerY-craniumSize/100*2,centerX-craniumSize/100*39,centerY);
 
     noFill()
     beginShape()
-    vertex(69.0444,117.4735);
-    vertex(78.0756,100.3624);
-    vertex(65.022,98.1331);
-    vertex(71.2329,85.2405);
-    vertex(61.2667,86.5847);
+    vertex(centerX-craniumSize/100*31,centerY+craniumSize/100*6);
+    vertex(centerX-craniumSize/100*22,centerY-craniumSize/100*11);
+    vertex(centerX-craniumSize/100*35,centerY-craniumSize/100*13);
+    vertex(centerX-craniumSize/100*29,centerY-craniumSize/100*26);
+    vertex(centerX-craniumSize/100*39,centerY-craniumSize/100*24.5);
     endShape(CLOSE)
 
     noFill()
     beginShape()
-    vertex(99.2467,107.6667);
-    vertex(77.2467,82.1111);
-    vertex(81.2467,69.8889);
-    vertex(90.7914,75.3972);
-    vertex(85.9877,110.7778);
+    vertex(centerX,centerY-craniumSize/100*3);
+    vertex(centerX-craniumSize/100*23,centerY-craniumSize/100*29);
+    vertex(centerX-craniumSize/100*19,centerY-craniumSize/100*41);
+    vertex(centerX-craniumSize/100*9,centerY-craniumSize/100*36);
+    vertex(centerX-craniumSize/100*14,centerY);
     endShape()
 
     noFill()
     beginShape()
-    vertex(104.5565,107.2611);
-    vertex(106.9986,67.7715);
-    vertex(118.022,78.2847);
-    vertex(109.1385,84.899);
-    vertex(113.4453,108.0063);
+    vertex(centerX+craniumSize/100*5,centerY-craniumSize/100*4);
+    vertex(centerX+craniumSize/100*7,centerY-craniumSize/100*41);
+    vertex(centerX+craniumSize/100*18,centerY-craniumSize/100*29);
+    vertex(centerX+craniumSize/100*9,centerY-craniumSize/100*26);
+    vertex(centerX+craniumSize/100*13,centerY-craniumSize/100);
     endShape()
 
     noFill()
     beginShape()
-    vertex(144.4507,95.7412);
-    vertex(141.5544,101.9381);
-    vertex(145.2083,111.6271);
-    vertex(136.5121,112.7269);
-    vertex(133.9999,118.1021);
+    vertex(centerX+craniumSize/100*45,centerY-craniumSize/100*15);
+    vertex(centerX+craniumSize/100*42,centerY-craniumSize/100*9);
+    vertex(centerX+craniumSize/100*45,centerY);
+    vertex(centerX+craniumSize/100*37,centerY+craniumSize/100*2);
+    vertex(centerX+craniumSize/100*34,centerY+craniumSize/100*7);
     endShape(CLOSE)
 
-    line(131.4444,81.4444,119.6667,111);
-    line(127.9023,90.3333,139,87.4444);
-    line(126.9933,112,125.8956,94.8889); 
+    line(centerX+craniumSize/100*32,centerY-craniumSize/100*30,centerX+craniumSize/100*20,centerY);
+    line(centerX+craniumSize/100*28,centerY-craniumSize/100*21,centerX+craniumSize/100*39,centerY-craniumSize/100*24);
+    line(centerX+craniumSize/100*27,centerY+craniumSize/100*1,centerX+craniumSize/100*26,centerY-craniumSize/100*16); 
   }
   
