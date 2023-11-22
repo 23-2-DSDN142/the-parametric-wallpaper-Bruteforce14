@@ -45,7 +45,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     pink 255,62,181
    */
     stroke(line3)
-    strokeWeight(2)
+    strokeWeight(3)
     fill(back)
   /*
     rect(0,0,200,200)
@@ -280,26 +280,26 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     fill(20);
 
     beginShape();
-    vertex(50,100);
-    vertex(50,75);
-    vertex(60,50);
-    vertex(70,75);
-    vertex(80,40);
-    vertex(90,75);
-    vertex(100,30);
-    vertex(110,75);
-    vertex(120,40);
-    vertex(130,75);
-    vertex(140,50);
-    vertex(150,75);
-    vertex(150,100);
+    vertex(centerX-craniumSize/100*50,centerY-craniumSize/100*11);
+    vertex(centerX-craniumSize/100*50,centerY-craniumSize/100*36);
+    vertex(centerX-craniumSize/100*40,centerY-craniumSize/100*61);
+    vertex(centerX-craniumSize/100*30,centerY-craniumSize/100*36);
+    vertex(centerX-craniumSize/100*20,centerY-craniumSize/100*71);
+    vertex(centerX-craniumSize/100*10,centerY-craniumSize/100*36);
+    vertex(centerX,centerY-craniumSize/100*81);
+    vertex(centerX+craniumSize/100*10,centerY-craniumSize/100*36);
+    vertex(centerX+craniumSize/100*20,centerY-craniumSize/100*71);
+    vertex(centerX+craniumSize/100*30,centerY-craniumSize/100*36);
+    vertex(centerX+craniumSize/100*40,centerY-craniumSize/100*61);
+    vertex(centerX+craniumSize/100*50,centerY-craniumSize/100*36);
+    vertex(centerX+craniumSize/100*50,centerY-craniumSize/100*11);
     endShape();
 
     fill(yellow)
 
-    ellipse(100,75,15,25);
-    ellipse(80,80,10,20);
-    ellipse(120,80,10,20)*/
+    ellipse(centerX,centerY-craniumSize/100*36,craniumSize/100*15,craniumSize/100*25);
+    ellipse(centerX-craniumSize/100*20,centerY-craniumSize/100*31,craniumSize/100*10,craniumSize/100*20);
+    ellipse(centerX+craniumSize/100*20,centerY-craniumSize/100*31,craniumSize/100*10,craniumSize/100*20)*/
 
     /* //Deserter
     stroke(line2)
