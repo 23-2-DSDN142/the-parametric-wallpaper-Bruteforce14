@@ -3,7 +3,7 @@
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -32,29 +32,34 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     let white = color(255,255,255);
     let fwhite = color(255,255,255,50);
     let line1 = color(black);
-    let line2 = color(pink);
+    let line2 = color(black);
     let line3 = color(black);
     let base1 = color(pink);
-    let base2 = color(black);
-    let base3 = color(black);
-    let back = color(white);
+    let base2 = color(yellow);
+    let base3 = color(yellow);
+    let hat1 = color(black)
+    let hat2 = color(yellow)
+    let back = color(yellow);
     let back2 = color(fblack);
-    let teeth = color(white);
+    let back3 = color(pink);
+    let back4 = color(black);
+    let teeth = color(yellow);
     
     let centerX =100;
     let centerY =100;
-    let craniumSize = 90;
+    let craniumSize = 150;
     let eyeSize = 15;
     let backCX = 100;
     let backCY = 100;
-    let backCS = 200;
+    let backCS = 250;
     let x = 100;
     let y = 100;
+    let s = 105;
 
-    let hat = 1;
+    let hat = 5;
     let sword =0;
-    let leye = 3;
-    let reye = 3;
+    let leye = 1;
+    let reye = 1;
     let background =4;
     
     
@@ -67,6 +72,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     if(background == 1)
     { stroke(line3);
       strokeWeight(3);
+      fill(back)
       rect(0,0,200,200)}
 
     if (background == 2) //Lines
@@ -167,7 +173,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
       line(200,20,20,200);}
 
     if (background == 3)
-    {strokeWeight(0)
+    {strokeWeight(5)
+      stroke(fwhite)
       fill(back2)
       ellipse(backCX,backCY,backCS);
       ellipse(backCX,backCY,backCS/8*7);
@@ -180,16 +187,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     }
 
     if(background == 4)
-    {
-      DrawSword(100,100,line2,base2)
-      DrawSword(125,100,line2,base2)
+    {/*
+      DrawSword(90,0,20,line3,base2);
+      DrawSword(90,25,-40,line2,back3);
+      DrawSword(90,50,60,line3,base2);
+      DrawSword(90,75,-80,line2,back3);
+      DrawSword(100,100,100,line3,base2);
+      DrawSword(125,110,-80,line2,back3);
+      DrawSword(150,110,60,line3,base2);
+      DrawSword(175,110,-40,line2,back3);
+      DrawSword(200,110,20,line3,base2);*/
+
+      DrawSword(x,y,s*1.8,back4,back4);
+      DrawSword(x-s/100*25,y-s/100*25,s*1.20,back3,back3);
+      DrawSword(x+s/100*25,y+s/100*25,s*1.20,back3,back3);
+      DrawSword(x+s/100*50,y+s/100*50,s*0.8,back4,back4);
+      DrawSword(x-s/100*50,y-s/100*50,s*0.80,back4,back4);
+      DrawSword(x-s/100*75,y-s/100*75,s*0.40,back3,back3);
+      DrawSword(x+s/100*75,y+s/100*75,s*0.40,back3,back3);
+  
     }
    
 
     if (sword > 0) //Gutterborn scum
     {//Gutterborn
       stroke(line2)
-      fill(base2)
+      fill(hat1)
       strokeWeight(2)
       beginShape()
       vertex(centerX+craniumSize/100*5,centerY-craniumSize/100*101);
@@ -277,7 +300,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(centerX+craniumSize/100*24,centerY+craniumSize/100*34);
     endShape();
   
-    fill(back);
+    fill(base2);
   
     stroke(line1);
 
@@ -324,12 +347,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     curveVertex(centerX,centerY+craniumSize/100*39);
     curveVertex(centerX-craniumSize/100*4,centerY+craniumSize/100*42);
     endShape(CLOSE);
+    
       
     if (hat == 4) //Wretched royalty
     {//CROWN
-      stroke(pink);
+      stroke(line2);
   
-      fill(20);
+      fill(hat1);
   
       beginShape();
       vertex(centerX-craniumSize/100*50,centerY-craniumSize/100*11);
@@ -347,7 +371,8 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
       vertex(centerX+craniumSize/100*50,centerY-craniumSize/100*11);
       endShape();
   
-      fill(yellow)
+      fill(hat2)
+      strokeWeight(2)
   
       ellipse(centerX,centerY-craniumSize/100*36,craniumSize/100*15,craniumSize/100*25);
       ellipse(centerX-craniumSize/100*20,centerY-craniumSize/100*31,craniumSize/100*10,craniumSize/100*20);
@@ -357,7 +382,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     {//Deserter
       stroke(line2)
       strokeWeight(2)
-      fill(base2)
+      fill(hat1)
       beginShape()
       vertex(centerX-craniumSize/100*30,centerY+craniumSize/100*19);
       vertex(centerX-craniumSize/100*25,centerY+craniumSize/100*39);
@@ -400,7 +425,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     if (hat == 6) //Occult herbmaster 
     { //Herbmaster
       stroke(line2)
-      fill(base3)
+      fill(hat1)
       strokeWeight(3)
   
       beginShape();
@@ -441,7 +466,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
       curveVertex(116.3333 ,104.3333 );
       endShape(CLOSE);
   
-      fill(base3);
+      fill(hat2);
       stroke(line2);
       strokeWeight(2)
       
@@ -477,21 +502,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     if (hat == 5) //Hereticl priest 
     {//Heretical Priest
-      stroke(pink);
-      strokeWeight(3);
+      stroke(line2);
+      strokeWeight(2);
   
-      line(85,110,110,110);
-      line(90,107,115,107);
-      line(98.5,75,98.5,120);
-      line(101.5,80,101.5,125)
-      line(92,105,92,109);
-      line(113,105,113,109);
-      line(108,112,108,108);
-      line(87,112,87,108);
-      line(96.5,118,100.5,118);
-      line(96.5,77,100.5,77);
-      line(99.5,82,103.5,82);
-      line(99.5,123,103.5,123);}
+      line(centerX-craniumSize/100*15,centerY+craniumSize/100*10,centerX+craniumSize/100*10,centerY+craniumSize/100*10);
+      line(centerX-craniumSize/100*10,centerY+craniumSize/100*7,centerX+craniumSize/100*15,centerY+craniumSize/100*7);
+      line(centerX-craniumSize/100*1.5,centerY-craniumSize/100*25,centerX-craniumSize/100*1.5,centerY+craniumSize/100*20);
+      line(centerX+craniumSize/100*1.5,centerY-craniumSize/100*20,centerX+craniumSize/100*1.5,centerY+craniumSize/100*25)
+      line(centerX-craniumSize/100*8,centerY+craniumSize/100*5,centerX-craniumSize/100*8,centerY+craniumSize/100*9);
+      line(centerX+craniumSize/100*13,centerY+craniumSize/100*5,centerX+craniumSize/100*13,centerY+craniumSize/100*9);
+      line(centerX+craniumSize/100*8,centerY+craniumSize/100*12,centerX+craniumSize/100*8,centerY+craniumSize/100*8);
+      line(centerX-craniumSize/100*13,centerY+craniumSize/100*12,centerX-craniumSize/100*13,centerY+craniumSize/100*8);
+      line(centerX-craniumSize/100*3.5,centerY+craniumSize/100*18,centerX+craniumSize/100*0.5,centerY+craniumSize/100*18);
+      line(centerX-craniumSize/100*3.5,centerY-craniumSize/100*23,centerX+craniumSize/100*0.5,centerY-craniumSize/100*23);
+      line(centerX-craniumSize/100*0.5,centerY-craniumSize/100*18,centerX+craniumSize/100*3.5,centerY-craniumSize/100*18);
+      line(centerX-craniumSize/100*0.5,centerY+craniumSize/100*23,centerX+craniumSize/100*3.5,centerY+craniumSize/100*23);}
     
 
     if (hat == 3) //Esoteric hermit
@@ -543,20 +568,29 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     line(centerX+craniumSize/100*27,centerY+craniumSize/100*1,centerX+craniumSize/100*26,centerY-craniumSize/100*16); }
   }
   
-  function DrawSword(x,y,mstroke,mfill){
+  function DrawSword(x,y,s,mstroke,mfill){
     stroke(mstroke)
     fill(mfill)
     strokeWeight(2)
-    beginShape()
-    vertex(x+5,y-101);
-    vertex(x+5,y-61);
-    vertex(x+10,y-57);
-    vertex(x+10,y+79);
-    vertex(x,y+89);
-    vertex(x-10,y+79);
-    vertex(x-10,y-57);
-    vertex(x-5,y-61);
-    vertex(x-5,y-101);
+    beginShape ();
+    vertex(x-s/50*25,y+s/50*25);
+    vertex(x-s/50*17,y+s/50*19);
+    vertex(x+s/50*14,y-s/50*11);
+    vertex(x+s/50*18,y-s/50*8);
+    vertex(x+s/50*19,y-s/50*9);
+    vertex(x+s/50*15,y-s/50*12);
+    vertex(x+s/50*15,y-s/50*13);
+    vertex(x+s/50*22,y-s/50*20);
+    vertex(x+s/50*23,y-s/50*20);
+    vertex(x+s/50*25,y-s/50*25);
+    vertex(x+s/50*20,y-s/50*23);
+    vertex(x+s/50*20,y-s/50*22);
+    vertex(x+s/50*13,y-s/50*15);
+    vertex(x+s/50*12,y-s/50*15);
+    vertex(x+s/50*9,y-s/50*19);
+    vertex(x+s/50*8,y-s/50*18);
+    vertex(x+s/50*11,y-s/50*14);
+    vertex(x-s/50*19,y+s/50*17);
     endShape(CLOSE);
   }
 
