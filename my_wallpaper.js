@@ -47,7 +47,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     
     let centerX =100;
     let centerY =100;
-    let craniumSize = 150;
+    let craniumSize = -150;
     let eyeSize = 15;
     let backCX = 100;
     let backCY = 100;
