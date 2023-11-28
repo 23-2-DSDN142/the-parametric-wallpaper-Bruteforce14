@@ -17,13 +17,15 @@ function setup_wallpaper(pWallpaper) {
 function wallpaper_background() {
   let pink= color(255,62,181);
   let yellow = color(255,233,0);
-  background(yellow)
+  let white = color(255);
+  let black = color(0);
+  background(pink)
  
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
     let pink= color(255,62,181);
-    let fpink= color(255,62,181,50);
+    let fpink= color(255,62,181,150);
     let yellow = color(255,233,0);
     let fyellow = color(255,233,0,50);
     let inner = color(255,255,255);
@@ -32,32 +34,32 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     let white = color(255,255,255);
     let fwhite = color(255,255,255,50);
     let line1 = color(black);
-    let line2 = color(black);
+    let line2 = color(yellow);
     let line3 = color(black);
-    let base1 = color(pink);
-    let base2 = color(yellow);
+    let base1 = color(yellow);
+    let base2 = color(pink);
     let base3 = color(yellow);
     let hat1 = color(black)
     let hat2 = color(yellow)
     let back = color(yellow);
     let back2 = color(fblack);
-    let back3 = color(pink);
+    let back3 = color(yellow);
     let back4 = color(black);
-    let teeth = color(yellow);
+    let teeth = color(white);
     
     let centerX =100;
     let centerY =100;
-    let craniumSize = -150;
+    let craniumSize = 120;
     let eyeSize = 15;
     let backCX = 100;
     let backCY = 100;
     let backCS = 250;
     let x = 100;
     let y = 100;
-    let s = 105;
+    let s = 110;
 
     let hat = 5;
-    let sword =0;
+    let sword =1;
     let leye = 1;
     let reye = 1;
     let background =4;
@@ -67,7 +69,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     yellow 255,233,0
     pink 255,62,181
    */
-   
+    if (craniumSize>100){
+      let lineW = 5
+    }
+    else{
+      let lineW = 1
+    }
 
     if(background == 1)
     { stroke(line3);
@@ -507,16 +514,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
       line(centerX-craniumSize/100*15,centerY+craniumSize/100*10,centerX+craniumSize/100*10,centerY+craniumSize/100*10);
       line(centerX-craniumSize/100*10,centerY+craniumSize/100*7,centerX+craniumSize/100*15,centerY+craniumSize/100*7);
-      line(centerX-craniumSize/100*1.5,centerY-craniumSize/100*25,centerX-craniumSize/100*1.5,centerY+craniumSize/100*20);
-      line(centerX+craniumSize/100*1.5,centerY-craniumSize/100*20,centerX+craniumSize/100*1.5,centerY+craniumSize/100*25)
+      line(centerX-craniumSize/100*1.5,centerY-craniumSize/100*25,centerX-craniumSize/100*1.5,centerY+craniumSize/100*16);
+      line(centerX+craniumSize/100*1.5,centerY-craniumSize/100*20,centerX+craniumSize/100*1.5,centerY+craniumSize/100*21)
       line(centerX-craniumSize/100*8,centerY+craniumSize/100*5,centerX-craniumSize/100*8,centerY+craniumSize/100*9);
       line(centerX+craniumSize/100*13,centerY+craniumSize/100*5,centerX+craniumSize/100*13,centerY+craniumSize/100*9);
       line(centerX+craniumSize/100*8,centerY+craniumSize/100*12,centerX+craniumSize/100*8,centerY+craniumSize/100*8);
       line(centerX-craniumSize/100*13,centerY+craniumSize/100*12,centerX-craniumSize/100*13,centerY+craniumSize/100*8);
-      line(centerX-craniumSize/100*3.5,centerY+craniumSize/100*18,centerX+craniumSize/100*0.5,centerY+craniumSize/100*18);
+      line(centerX-craniumSize/100*3.5,centerY+craniumSize/100*14,centerX+craniumSize/100*0.5,centerY+craniumSize/100*14);
       line(centerX-craniumSize/100*3.5,centerY-craniumSize/100*23,centerX+craniumSize/100*0.5,centerY-craniumSize/100*23);
       line(centerX-craniumSize/100*0.5,centerY-craniumSize/100*18,centerX+craniumSize/100*3.5,centerY-craniumSize/100*18);
-      line(centerX-craniumSize/100*0.5,centerY+craniumSize/100*23,centerX+craniumSize/100*3.5,centerY+craniumSize/100*23);}
+      line(centerX-craniumSize/100*0.5,centerY+craniumSize/100*18,centerX+craniumSize/100*3.5,centerY+craniumSize/100*18);}
     
 
     if (hat == 3) //Esoteric hermit
